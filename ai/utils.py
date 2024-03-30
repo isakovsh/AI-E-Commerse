@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
-def get_sql_chain(db):
+def get_sql_chain(user_question,db):
     template = """
     You are a data analyst at a company. You are interacting with a user who is asking you questions about the company's database.
     Based on the table schema below, write a SQL query that would answer the user's question.
